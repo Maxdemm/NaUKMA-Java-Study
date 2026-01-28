@@ -3,9 +3,9 @@ package org.example.pract3;
 /**
  * Ця коротка програма пояснює місце зберігання примітивної змінної, об'єктів та масиву з певними елементами
  */
-public class MemoryTask {
+public class MemoryTask1 {
     public static void main(String[] args) {
-        MemoryTask task = new MemoryTask();
+        MemoryTask1 task = new MemoryTask1();
         task.run();
     }
 
