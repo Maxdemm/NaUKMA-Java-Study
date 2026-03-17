@@ -6,14 +6,16 @@ package org.example.pract3;
 public class User {
     /** The name of the user */
     private String name;
+    private String email;
 
     /**
      * Constructs a new User with the specified name.
      *
      * @param name the name of the user
      */
-    public User(String name) {
+    public User(String name, String email) {
         this.name = name;
+        this.email = email;
     }
 
     /**
@@ -25,6 +27,10 @@ public class User {
         return name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     /**
      * Returns a string representation of the user.
      *
@@ -32,6 +38,6 @@ public class User {
      */
     @Override
     public String toString() {
-        return "User{" + "name='" + name + "}";
+        return "User{" + "name='" + name + "}" + " | email: " + email;
     }
 }

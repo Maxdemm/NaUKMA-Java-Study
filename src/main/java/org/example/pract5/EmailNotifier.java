@@ -1,3 +1,4 @@
+<<<<<<< feature/nested-lambda-lab
 package org.example.pract5;
 
 public interface EmailNotifier {
@@ -5,3 +6,12 @@ public interface EmailNotifier {
         System.out.println("email | " + s);
     }
 }
+=======
+package org.example.pract5;
+
+public interface EmailNotifier {
+    default void send(String s) {
+        System.out.println("email | " + s);
+    }
+}
+>>>>>>> master

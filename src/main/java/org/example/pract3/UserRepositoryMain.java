@@ -2,7 +2,10 @@ package org.example.pract3;
 
 import org.example.pract3.UserRepository;
 
+import java.util.ArrayList;
 import java.util.Optional;
+import java.util.Scanner;
+
 /**
  * Main class demonstrating the usage of UserRepository.
  * Shows examples of handling Optional:
@@ -16,20 +19,11 @@ public class UserRepositoryMain {
      * @param args command-line arguments
      */
     public static void main(String[] args) {
-        UserRepository userRepository = new UserRepository();
+        Scanner scanner = new Scanner(System.in);
+        UserRepository ur = new UserRepository();
 
-        // Find a user with a specific email
-        Optional<User> optionalUser1 = userRepository.findByEmail("someaddress@gmail.com");
-        User user1 = optionalUser1.orElseGet(() -> new User("undefined"));
-        System.out.println("User: " + user1.getName());
+        User user1 = ur.findByEmail(scanner.nextLine()).orElseGet(() -> new User("guest", ur.createNewEmail()));
+        System.out.println("welcome " + user1.getName() + " | your email: " + user1.getEmail());
 
-        // Find a user with another email
-        Optional<User> optionalUser2 = userRepository.findByEmail("otheraddress@gmail.com");
-        try {
-            User user2 = optionalUser2.orElseThrow(() -> new RuntimeException("no user found"));
-            System.out.println("User: " + user2.getName());
-        } catch (RuntimeException e) {
-            System.out.println(e.getMessage());
-        }
     }
 }
