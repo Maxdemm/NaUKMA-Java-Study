@@ -34,7 +34,7 @@ public class MainTask5 {
         System.out.println(recentBooks);
         System.out.println(oldBooks);
 
-        Map<String, Integer> sortedRevenue = sales.stream()
+        Map<String, Integer> sorted = sales.stream()
                 .collect(Collectors.toMap(
                         Sale::product,
                         Sale::cents,
@@ -42,6 +42,6 @@ public class MainTask5 {
                         TreeMap::new
                 ));
 
-        System.out.println(sortedRevenue);
+        System.out.println(sorted);
     }
 }
