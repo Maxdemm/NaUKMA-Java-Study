@@ -1,0 +1,8 @@
+id,email,status,amountCents
+1,ivan@gmail.com,PAID,5000
+2,olga@ukr.net,NEW,1250
+3, email@vvv
+4,petro@ukma.edu.ua,FAILED,0
+5, вася@gmail.com, NEW_STATUS, 200
+
+2,olga@ukr.net,NEW,1250
